@@ -1,0 +1,99 @@
+body {
+  background-image: linear-gradient(to bottom right, #202743, #203000);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#Movie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#Movies {
+  border: solid 1px #ccc;
+  flex: 1;
+  width: 19.3vw;
+  height: 49vh;
+}
+#Movies img {
+  width: 19.3vw;
+  height: 49vh;
+}
+
+@media (max-width: 500px) {
+  #Movie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #Movies {
+    border: solid 1px #ccc;
+    flex: 1;
+    width: 100vw;
+    height: 49vh;
+  }
+  #Movies img {
+    width: 100vw;
+    height: 49vh;
+    /* text-align: center; */
+  }
+  .overlay {
+    opacity: 0;
+    background-color: #202743;
+  }
+  #Movies:hover .overlay {
+    opacity: 1;
+    min-width: 100vw;
+    min-height: 49vh;
+    margin: 0;
+  }
+}
+@media (min-width: 500px) and (max-width: 740px) {
+  #Movie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #Movies {
+    border: solid 1px #ccc;
+    flex: 1;
+    width: 23.7vw;
+    height: 49vh;
+  }
+  #Movies img {
+    width: 24vw;
+    height: 49vh;
+    text-align: center;
+  }
+  .overlay {
+    opacity: 0;
+    background-color: #202743;
+    position: relative;
+  }
+  #Movies:hover .overlay {
+    opacity: 1;
+    min-width: 24vw;
+    min-height: 49vh;
+    margin: 0;
+    bottom: 5vh;
+  }
+}
+.overlay {
+  opacity: 0;
+  background-color: #202743;
+  position: relative;
+  height: 0;
+  width: 0;
+  transition: 0.1s ease ease-in;
+}
+#Movies:hover .overlay {
+  opacity: 1;
+  width: 19.3vw;
+  height: 49vh;
+  bottom: 54vh;
+  margin: 0;
+}
+.Movie-Name {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
